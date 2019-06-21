@@ -1,0 +1,15 @@
+* {
+    font-family: 'Montserrat';
+    font-weight: 800
+}
+.shadow {
+	-webkit-box-shadow: 0 1px 7px rgba(0,0,0,.05);
+    box-shadow: 0 1px 7px rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.04)!important;
+}
+nav{
+	z-index:99999;
+}
+.center{
+	align:center;
+}
