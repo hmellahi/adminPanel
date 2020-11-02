@@ -1,0 +1,32 @@
+{
+  "name": "sellers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fullName": {
+      "type": "string"
+    },
+    "storeName": {
+      "type": "string"
+    },
+    "products": {
+      "type": "number"
+    },
+    "walletBalance": {
+      "type": "number"
+    },
+    "createDate": {
+      "type": "date"
+    },
+    "revenue": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

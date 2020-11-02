@@ -1,0 +1,38 @@
+{
+  "name": "orders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "products": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "paymentState": {
+      "type": "string"
+    },
+    "total": {
+      "type": "number"
+    },
+    "payementMethod": {
+      "type": "string",
+      "required": true
+    },
+    "orderStatus": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "contacts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "avatar": {
+      "type": "string",
+      "default": "default.png"
+    },
+    "email": {
+      "type": "string",
+      "required":true
+    },
+    "phone": {
+      "type": "number",
+      "required": true
+    },
+    "rating": {
+      "type": "string",
+      "required": true,
+      "default": "3"
+    },
+    "profession": {
+      "type": "string",
+      "default": "software enginner"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
