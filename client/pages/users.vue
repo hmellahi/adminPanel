@@ -40,31 +40,31 @@
               label="Name"
               single-line
               solo
-              v-model="user.username"
+              v-model="newUser.name"
             ></v-text-field>
             <v-text-field
               label="Email"
               single-line
               solo
-              v-model="user.email"
+              v-model="newUser.email"
             ></v-text-field>
             <v-text-field
               label="Balance"
               single-line
               solo
-              v-model="user.balance"
+              v-model="newUser.balance"
             ></v-text-field>
             <v-text-field
               label="Member Since"
               single-line
               solo
-              v-model="user.created_at"
+              v-model="newUser.created_at"
             ></v-text-field>
             <v-text-field
               label="Avatar"
               single-line
               solo
-              v-model="user.avatar"
+              v-model="newUser.avatar"
             ></v-text-field>
           </v-card-text>
 
@@ -93,16 +93,30 @@
     </v-card-title>
     <v-data-table
       :headers="headers"
-      :items="users"
       :search="search"
+      :users="users"
     >
-      <template v-slot:items="props">
-        <td class="text-xs-left"><v-avatar size="40" class="ma-2"><img :src="props.item.avatar" alt="alt"></v-avatar></td>
-        <td class="text-xs-left">{{ props.item.username }}</td>
-        <td class="text-xs-left">{{ props.item.email }}</td>
-        <td class="text-xs-left">{{ props.item.created_at }}</td>
+      <div  v-for="user in users" v-bind:key="user.name">
+        <!-- <td class="text-xs-left"><v-avatar size="40" class="ma-2"><img :src="users.avatar" alt="alt"></v-avatar></td>
+        <td class="text-xs-left">{{ users.username }}</td>
+        <td class="text-xs-left">{{ users.email }}</td>
+        <td class="text-xs-left">{{ users.created_at }}</td>
         <td class="text-xs-left">
-          <v-chip small v-if="props.item.emailVerified" class="success" text-color="white">
+          <v-chip small v-if="users.emailVerified" class="success" text-color="white">
+            Confirmed
+            <v-icon r>check_circle_outline</v-icon>
+          </v-chip>
+          <v-chip v-else class="error " text-color="white">
+            Not Confirmed
+            <v-icon right>highlight_off</v-icon>
+          </v-chip>
+        </td> -->
+        <td class="text-xs-left"><v-avatar size="40" class="ma-2"><img :src="user.avatar" alt="alt"></v-avatar></td>
+        <td class="text-xs-left">{{ user.username }}</td>
+        <td class="text-xs-left">{{ user.email }}</td>
+        <td class="text-xs-left">{{ user.created_at }}</td>
+        <td class="text-xs-left">
+          <v-chip small v-if="user.emailVerified" class="success" text-color="white">
             Confirmed
             <v-icon r>check_circle_outline</v-icon>
           </v-chip>
@@ -140,36 +154,36 @@
                 label="Name"
                 single-line
                 solo
-                v-model="user.name"
-                value="props.item.name"
+                v-model="newUser.name"
+                value="users.name"
               ></v-text-field>
               <v-text-field
                 label="Email"
                 single-line
                 solo
-                v-model="user.email"
-                value="props.item.email"
+                v-model="newUser.email"
+                value="users.email"
               ></v-text-field>
               <v-text-field
                 label="Balance"
                 single-line
                 solo
-                v-model="user.balance"
-                value="props.item.balance"
+                v-model="newUser.balance"
+                value="users.balance"
               ></v-text-field>
               <v-text-field
                 label="Member Since"
                 single-line
                 solo
-                v-model="user.created_at"
-                value="props.item.created_at"
+                v-model="newUser.created_at"
+                value="users.created_at"
               ></v-text-field>
               <v-text-field
                 label="Avatar"
                 single-line
                 solo
-                v-model="user.avatar"
-                value="props.item.avatar"
+                v-model="newUser.avatar"
+                value="users.avatar"
               ></v-text-field>
             </v-card-text>
 
@@ -180,8 +194,9 @@
               <v-btn
                 color="primary"
                 flat
+                @click="editModel = false"
               >
-              <!--  @click="updateuser(user, props.item)"-->
+              <!--  @click="updateuser(user, users)"-->
               Apply
               </v-btn>
               <v-btn
@@ -198,7 +213,7 @@
             <v-icon @click="removeUser">delete</v-icon>
           </v-btn>
         </td>
-      </template>
+      </div>
       <template v-slot:no-results>
         <v-alert :value="true" color="error" icon="warning">
           Your search for "{{ search }}" found no results.
@@ -211,6 +226,9 @@
 
 <script>
   export default {
+    // props: {
+    //   users: {default: []}
+    // },
     data () {
       return {
         editModel:false,
@@ -221,13 +239,20 @@
           email:"",
           created_at:''
         },
-        /*newuser:{
+        users: [{
+          avatar:'hey',
+          name:"hey",
+          email:"hey",
+          created_at:'0',
+          balance:20
+        }],
+        newUser:{
           avatar:'',
           name:"",
-          balance:"",
           email:"",
-          created_at:''
-        },*/
+          created_at:'',
+          balance : ''
+        },
         search: '',
         headers: [
           { text: 'Avatar', value: 'avatar' },
@@ -240,11 +265,14 @@
      }
     },
     methods: {
-      addUser(){
-        console.log(this.user);
+      addUser(e){
+        e.preventDefault();
+        console.log(this.newUser);
         //this.users.push(this.user);
-        this.users.push(this.user);
-        this.clear();
+        this.users.push(this.newUser);
+        console.log(this.users);
+        this.addModel = false;
+        //this.clear();
       },
       removeUser(e){
         let user = e.target.parentNode.parentNode.parentNode.parentNode;
@@ -256,22 +284,22 @@
         this.clear();
       },
       clear(){
-        this.user.username = '';
+        this.user.name = '';
         this.user.avatar = '';
         this.user.balance = '';
         this.user.email = '';
         this.user.created_at = '';
       }
     },
-    fetch ({store}) {
-      store.dispatch('states/getUsers') // Trigger GetPosts Action
-     },
-    computed: {
-     // Get users from Store
-     users () {
-       console.log(this.$store.state, '');
-       return this.$store.state.states.users;
-     }
-    },
+    // fetch ({store}) {
+    //   store.dispatch('states/getUsers') // Trigger GetPosts Action
+    //  },
+    // computed: {
+    //  // Get users from Store
+    // //  users () {
+    // //   //  console.log(this.$store.state, '');
+    // //   //  /return this.$store.state.states.users;
+    // //  }
+    // },
   }
 </script>

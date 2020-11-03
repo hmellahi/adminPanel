@@ -1,6 +1,6 @@
 <template>
 	<div id="dashboard">
-		<h1 class="subheading grey--text">د{{ $t('dashboard') }}</h1>
+		<h1 class="subheading grey--text">{{ $t('dashboard') }}</h1>
 		<!-- States Start -->
 		<div class="states">
 			<h1 class="subheading grey--text">States</h1>
@@ -12,7 +12,7 @@
 						<v-card-text>
 							<h2 class="subheading pa-1">{{ state.count }} <span class="wheight-bold">{{ state.name }}</span></h2>
 						</v-card-text>
-						<v-btn>ReadMore</v-btn>
+						<v-btn>Read More</v-btn>
 					</v-card>
 				</v-flex>
 			</v-layout>
@@ -30,12 +30,12 @@ import Chart from 'chart';
 import { mapMutations } from 'vuex'
 
 export default{
-	computed: {
-	   // Get States from Store
-	   states () {
-	      return this.$store.state.states.states;
-	   }
-    },
+	// computed: {
+	//    // Get States from Store
+	//    states () {
+	//       return this.$store.state.states.states;
+	//    }
+    // },
 	mounted(){
 		var ctx = document.getElementById('myChart').getContext('2d');
 		var myChart = new Chart(ctx, {

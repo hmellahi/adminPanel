@@ -144,15 +144,7 @@
           		{title : 'customers', icon: 'people', path:'/CRM/customers'}
           	]
           },
-          /*{ 
-          	title: 'Home', 
-          	icon: 'dashboard' , 
-          	path:'/',
-          	subItems:[
-          		{title : '', icon: '', path:''}
-          	]
-          },*/
-          { 
+          {
           	title: 'profile', 
           	icon: 'person' , 
           	path:'/profile',

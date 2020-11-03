@@ -1,7 +1,7 @@
 // fr-FR.js with Frensh translations
 export default {
   /*=== Sidebar Start ===*/
-  dashboard:"لوحة التحطم",
+  dashboard:"لوحة التحكم",
   Ecommerce:"Commerce ",
   profile:"Profile",
   settings:"Parametres",

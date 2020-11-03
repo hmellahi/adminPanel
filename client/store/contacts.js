@@ -2,12 +2,12 @@ import axios from "axios"
 let API = 'http://localhost:5000/api';
 export const state = () => ({
 	all : [
-   /*{avatar:require("../assets/img/contacts/contact1.jpg"), name:"John Doe", phone:700, email :"johnDoe@email.com", created_at:2014},
+   {avatar:require("../assets/img/contacts/contact1.jpg"), name:"John Doe", phone:700, email :"johnDoe@email.com", created_at:2014},
    {avatar:require("../assets/img/contacts/contact2.jpg"), name:"Cordia Malsam",phone:550,  email :"Cordia@email.com", created_at:2015},
    {avatar:require("../assets/img/contacts/contact3.jpg"), name:"Arlena Paden",phone:600,  email :"arlenaPaden@email.com", created_at:2019},
    {avatar:require("../assets/img/contacts/contact4.jpg"), name:"Brenna Markee ",phone:10000, email :"brennaMarkee@email.com", created_at:2016},
    {avatar:require("../assets/img/contacts/contact5.jpg"), name:"Ruby Lowe ",phone:6700,email:"rubyLowe", created_at:2016},
-  */
+  
   ], 
 	contact:''
 })
