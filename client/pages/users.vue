@@ -94,29 +94,15 @@
     <v-data-table
       :headers="headers"
       :search="search"
-      :users="users"
+      :items="users"
     >
-      <div  v-for="user in users" v-bind:key="user.name">
-        <!-- <td class="text-xs-left"><v-avatar size="40" class="ma-2"><img :src="users.avatar" alt="alt"></v-avatar></td>
-        <td class="text-xs-left">{{ users.username }}</td>
-        <td class="text-xs-left">{{ users.email }}</td>
-        <td class="text-xs-left">{{ users.created_at }}</td>
+      <template v-slot:items="props">
+        <td class="text-xs-left"><v-avatar size="40" class="ma-2"><img :src="props.item.avatar" alt="alt"></v-avatar></td>
+        <td class="text-xs-left">{{ props.item.name }}</td>
+        <td class="text-xs-left">{{ props.item.email }}</td>
+        <td class="text-xs-left">{{ props.item.created_at }}</td>
         <td class="text-xs-left">
-          <v-chip small v-if="users.emailVerified" class="success" text-color="white">
-            Confirmed
-            <v-icon r>check_circle_outline</v-icon>
-          </v-chip>
-          <v-chip v-else class="error " text-color="white">
-            Not Confirmed
-            <v-icon right>highlight_off</v-icon>
-          </v-chip>
-        </td> -->
-        <td class="text-xs-left"><v-avatar size="40" class="ma-2"><img :src="user.avatar" alt="alt"></v-avatar></td>
-        <td class="text-xs-left">{{ user.username }}</td>
-        <td class="text-xs-left">{{ user.email }}</td>
-        <td class="text-xs-left">{{ user.created_at }}</td>
-        <td class="text-xs-left">
-          <v-chip small v-if="user.emailVerified" class="success" text-color="white">
+          <v-chip small v-if="props.item.emailVerified" class="success" text-color="white">
             Confirmed
             <v-icon r>check_circle_outline</v-icon>
           </v-chip>
@@ -210,10 +196,10 @@
           </v-card>
         </v-dialog>
           <v-btn fab class="error" small>
-            <v-icon @click="removeUser">delete</v-icon>
+            <v-icon @click="removeUser(props.item.id)">delete</v-icon>
           </v-btn>
         </td>
-      </div>
+      </template>
       <template v-slot:no-results>
         <v-alert :value="true" color="error" icon="warning">
           Your search for "{{ search }}" found no results.
@@ -226,32 +212,37 @@
 
 <script>
   export default {
-    // props: {
-    //   users: {default: []}
-    // },
+    props: {
+      lastid:0,
+    },
     data () {
       return {
+        lastid:0,
         editModel:false,
         addModel:false,
         user:{
           avatar:'',
           name:"",
           email:"",
-          created_at:''
+          created_at:'',
+          id:0
         },
-        users: [{
-          avatar:'hey',
-          name:"hey",
-          email:"hey",
-          created_at:'0',
-          balance:20
-        }],
+        users: [],
+        // users: [{
+        //   avatar:'/_nuxt/client/assets/img/contacts/contact1.jpg',
+        //   name:"hey",
+        //   email:"hey",
+        //   created_at:'0',
+        //   balance:20,
+        //   id:0
+        // }],
         newUser:{
           avatar:'',
           name:"",
           email:"",
           created_at:'',
-          balance : ''
+          balance : '',
+          id : 0
         },
         search: '',
         headers: [
@@ -267,16 +258,17 @@
     methods: {
       addUser(e){
         e.preventDefault();
-        console.log(this.newUser);
-        //this.users.push(this.user);
+        this.newUser.id = lastid;
         this.users.push(this.newUser);
-        console.log(this.users);
         this.addModel = false;
+        lastid++;
         //this.clear();
       },
-      removeUser(e){
-        let user = e.target.parentNode.parentNode.parentNode.parentNode;
-        this.users.slice(indexof(user),1);
+      removeUser(id){
+        //let user = e.target.parentNode.parentNode.parentNode.parentNode;
+        //console.log(user);
+        this.users.splice(id,1);
+        console.log(id,this.users);
         //this.users.slice(0,this.users.indexof(user));
       },
       Updateuser(user, olduser){
