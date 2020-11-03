@@ -2,22 +2,22 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _32f3440e = () => interopDefault(import('..\\client\\pages\\dashboard.vue' /* webpackChunkName: "pages_dashboard" */))
-const _46afc98f = () => interopDefault(import('..\\client\\pages\\events.vue' /* webpackChunkName: "pages_events" */))
-const _4e21f400 = () => interopDefault(import('..\\client\\pages\\inbox.vue' /* webpackChunkName: "pages_inbox" */))
-const _70859763 = () => interopDefault(import('..\\client\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
-const _25834500 = () => interopDefault(import('..\\client\\pages\\logout.vue' /* webpackChunkName: "pages_logout" */))
-const _60aa2123 = () => interopDefault(import('..\\client\\pages\\profile.vue' /* webpackChunkName: "pages_profile" */))
-const _087d2299 = () => interopDefault(import('..\\client\\pages\\register.vue' /* webpackChunkName: "pages_register" */))
-const _e3be1fce = () => interopDefault(import('..\\client\\pages\\settings.vue' /* webpackChunkName: "pages_settings" */))
-const _277062fc = () => interopDefault(import('..\\client\\pages\\users.vue' /* webpackChunkName: "pages_users" */))
-const _1e376e0b = () => interopDefault(import('..\\client\\pages\\CRM\\contacts.vue' /* webpackChunkName: "pages_CRM_contacts" */))
-const _5b4a5866 = () => interopDefault(import('..\\client\\pages\\CRM\\customers.vue' /* webpackChunkName: "pages_CRM_customers" */))
-const _16a4f515 = () => interopDefault(import('..\\client\\pages\\Ecommerce\\orderDetail.vue' /* webpackChunkName: "pages_Ecommerce_orderDetail" */))
-const _5ffc7b7f = () => interopDefault(import('..\\client\\pages\\Ecommerce\\orders.vue' /* webpackChunkName: "pages_Ecommerce_orders" */))
-const _b46d0c04 = () => interopDefault(import('..\\client\\pages\\Ecommerce\\products.vue' /* webpackChunkName: "pages_Ecommerce_products" */))
-const _56fc792a = () => interopDefault(import('..\\client\\pages\\Ecommerce\\sellers.vue' /* webpackChunkName: "pages_Ecommerce_sellers" */))
-const _b2441768 = () => interopDefault(import('..\\client\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _f739d374 = () => interopDefault(import('../client/pages/dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _dff83b52 = () => interopDefault(import('../client/pages/events.vue' /* webpackChunkName: "pages/events" */))
+const _6103a238 = () => interopDefault(import('../client/pages/inbox.vue' /* webpackChunkName: "pages/inbox" */))
+const _f93174ca = () => interopDefault(import('../client/pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _36927648 = () => interopDefault(import('../client/pages/logout.vue' /* webpackChunkName: "pages/logout" */))
+const _41d9215b = () => interopDefault(import('../client/pages/profile.vue' /* webpackChunkName: "pages/profile" */))
+const _4d2e2961 = () => interopDefault(import('../client/pages/register.vue' /* webpackChunkName: "pages/register" */))
+const _5a5c123e = () => interopDefault(import('../client/pages/settings.vue' /* webpackChunkName: "pages/settings" */))
+const _01ad068c = () => interopDefault(import('../client/pages/users.vue' /* webpackChunkName: "pages/users" */))
+const _5d7ab0c2 = () => interopDefault(import('../client/pages/CRM/contacts.vue' /* webpackChunkName: "pages/CRM/contacts" */))
+const _7b7fe7f6 = () => interopDefault(import('../client/pages/CRM/customers.vue' /* webpackChunkName: "pages/CRM/customers" */))
+const _4b53b282 = () => interopDefault(import('../client/pages/Ecommerce/orderDetail.vue' /* webpackChunkName: "pages/Ecommerce/orderDetail" */))
+const _6443641c = () => interopDefault(import('../client/pages/Ecommerce/orders.vue' /* webpackChunkName: "pages/Ecommerce/orders" */))
+const _22807bb1 = () => interopDefault(import('../client/pages/Ecommerce/products.vue' /* webpackChunkName: "pages/Ecommerce/products" */))
+const _b55615d2 = () => interopDefault(import('../client/pages/Ecommerce/sellers.vue' /* webpackChunkName: "pages/Ecommerce/sellers" */))
+const _8c80baf8 = () => interopDefault(import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
 
@@ -95,259 +95,259 @@ export function createRouter() {
 
     routes: [{
       path: "/dashboard",
-      component: _32f3440e,
+      component: _f739d374,
       name: "dashboard___en"
     }, {
       path: "/es/dashboard",
-      component: _32f3440e,
+      component: _f739d374,
       name: "dashboard___es"
     }, {
       path: "/fr/dashboard",
-      component: _32f3440e,
+      component: _f739d374,
       name: "dashboard___fr"
     }, {
       path: "/ar/dashboard",
-      component: _32f3440e,
+      component: _f739d374,
       name: "dashboard___ar"
     }, {
       path: "/events",
-      component: _46afc98f,
+      component: _dff83b52,
       name: "events___en"
     }, {
       path: "/es/events",
-      component: _46afc98f,
+      component: _dff83b52,
       name: "events___es"
     }, {
       path: "/fr/events",
-      component: _46afc98f,
+      component: _dff83b52,
       name: "events___fr"
     }, {
       path: "/ar/events",
-      component: _46afc98f,
+      component: _dff83b52,
       name: "events___ar"
     }, {
       path: "/inbox",
-      component: _4e21f400,
+      component: _6103a238,
       name: "inbox___en"
     }, {
       path: "/es/inbox",
-      component: _4e21f400,
+      component: _6103a238,
       name: "inbox___es"
     }, {
       path: "/fr/inbox",
-      component: _4e21f400,
+      component: _6103a238,
       name: "inbox___fr"
     }, {
       path: "/ar/inbox",
-      component: _4e21f400,
+      component: _6103a238,
       name: "inbox___ar"
     }, {
       path: "/login",
-      component: _70859763,
+      component: _f93174ca,
       name: "login___en"
     }, {
       path: "/es/login",
-      component: _70859763,
+      component: _f93174ca,
       name: "login___es"
     }, {
       path: "/fr/login",
-      component: _70859763,
+      component: _f93174ca,
       name: "login___fr"
     }, {
       path: "/ar/login",
-      component: _70859763,
+      component: _f93174ca,
       name: "login___ar"
     }, {
       path: "/logout",
-      component: _25834500,
+      component: _36927648,
       name: "logout___en"
     }, {
       path: "/es/logout",
-      component: _25834500,
+      component: _36927648,
       name: "logout___es"
     }, {
       path: "/fr/logout",
-      component: _25834500,
+      component: _36927648,
       name: "logout___fr"
     }, {
       path: "/ar/logout",
-      component: _25834500,
+      component: _36927648,
       name: "logout___ar"
     }, {
       path: "/profile",
-      component: _60aa2123,
+      component: _41d9215b,
       name: "profile___en"
     }, {
       path: "/es/profile",
-      component: _60aa2123,
+      component: _41d9215b,
       name: "profile___es"
     }, {
       path: "/fr/profile",
-      component: _60aa2123,
+      component: _41d9215b,
       name: "profile___fr"
     }, {
       path: "/ar/profile",
-      component: _60aa2123,
+      component: _41d9215b,
       name: "profile___ar"
     }, {
       path: "/register",
-      component: _087d2299,
+      component: _4d2e2961,
       name: "register___en"
     }, {
       path: "/es/register",
-      component: _087d2299,
+      component: _4d2e2961,
       name: "register___es"
     }, {
       path: "/fr/register",
-      component: _087d2299,
+      component: _4d2e2961,
       name: "register___fr"
     }, {
       path: "/ar/register",
-      component: _087d2299,
+      component: _4d2e2961,
       name: "register___ar"
     }, {
       path: "/settings",
-      component: _e3be1fce,
+      component: _5a5c123e,
       name: "settings___en"
     }, {
       path: "/es/settings",
-      component: _e3be1fce,
+      component: _5a5c123e,
       name: "settings___es"
     }, {
       path: "/fr/settings",
-      component: _e3be1fce,
+      component: _5a5c123e,
       name: "settings___fr"
     }, {
       path: "/ar/settings",
-      component: _e3be1fce,
+      component: _5a5c123e,
       name: "settings___ar"
     }, {
       path: "/users",
-      component: _277062fc,
+      component: _01ad068c,
       name: "users___en"
     }, {
       path: "/es/users",
-      component: _277062fc,
+      component: _01ad068c,
       name: "users___es"
     }, {
       path: "/fr/users",
-      component: _277062fc,
+      component: _01ad068c,
       name: "users___fr"
     }, {
       path: "/ar/users",
-      component: _277062fc,
+      component: _01ad068c,
       name: "users___ar"
     }, {
       path: "/CRM/contacts",
-      component: _1e376e0b,
+      component: _5d7ab0c2,
       name: "CRM-contacts___en"
     }, {
       path: "/es/CRM/contacts",
-      component: _1e376e0b,
+      component: _5d7ab0c2,
       name: "CRM-contacts___es"
     }, {
       path: "/fr/CRM/contacts",
-      component: _1e376e0b,
+      component: _5d7ab0c2,
       name: "CRM-contacts___fr"
     }, {
       path: "/ar/CRM/contacts",
-      component: _1e376e0b,
+      component: _5d7ab0c2,
       name: "CRM-contacts___ar"
     }, {
       path: "/CRM/customers",
-      component: _5b4a5866,
+      component: _7b7fe7f6,
       name: "CRM-customers___en"
     }, {
       path: "/es/CRM/customers",
-      component: _5b4a5866,
+      component: _7b7fe7f6,
       name: "CRM-customers___es"
     }, {
       path: "/fr/CRM/customers",
-      component: _5b4a5866,
+      component: _7b7fe7f6,
       name: "CRM-customers___fr"
     }, {
       path: "/ar/CRM/customers",
-      component: _5b4a5866,
+      component: _7b7fe7f6,
       name: "CRM-customers___ar"
     }, {
       path: "/Ecommerce/orderDetail",
-      component: _16a4f515,
+      component: _4b53b282,
       name: "Ecommerce-orderDetail___en"
     }, {
       path: "/es/Ecommerce/orderDetail",
-      component: _16a4f515,
+      component: _4b53b282,
       name: "Ecommerce-orderDetail___es"
     }, {
       path: "/fr/Ecommerce/orderDetail",
-      component: _16a4f515,
+      component: _4b53b282,
       name: "Ecommerce-orderDetail___fr"
     }, {
       path: "/ar/Ecommerce/orderDetail",
-      component: _16a4f515,
+      component: _4b53b282,
       name: "Ecommerce-orderDetail___ar"
     }, {
       path: "/Ecommerce/orders",
-      component: _5ffc7b7f,
+      component: _6443641c,
       name: "Ecommerce-orders___en"
     }, {
       path: "/es/Ecommerce/orders",
-      component: _5ffc7b7f,
+      component: _6443641c,
       name: "Ecommerce-orders___es"
     }, {
       path: "/fr/Ecommerce/orders",
-      component: _5ffc7b7f,
+      component: _6443641c,
       name: "Ecommerce-orders___fr"
     }, {
       path: "/ar/Ecommerce/orders",
-      component: _5ffc7b7f,
+      component: _6443641c,
       name: "Ecommerce-orders___ar"
     }, {
       path: "/Ecommerce/products",
-      component: _b46d0c04,
+      component: _22807bb1,
       name: "Ecommerce-products___en"
     }, {
       path: "/es/Ecommerce/products",
-      component: _b46d0c04,
+      component: _22807bb1,
       name: "Ecommerce-products___es"
     }, {
       path: "/fr/Ecommerce/products",
-      component: _b46d0c04,
+      component: _22807bb1,
       name: "Ecommerce-products___fr"
     }, {
       path: "/ar/Ecommerce/products",
-      component: _b46d0c04,
+      component: _22807bb1,
       name: "Ecommerce-products___ar"
     }, {
       path: "/Ecommerce/sellers",
-      component: _56fc792a,
+      component: _b55615d2,
       name: "Ecommerce-sellers___en"
     }, {
       path: "/es/Ecommerce/sellers",
-      component: _56fc792a,
+      component: _b55615d2,
       name: "Ecommerce-sellers___es"
     }, {
       path: "/fr/Ecommerce/sellers",
-      component: _56fc792a,
+      component: _b55615d2,
       name: "Ecommerce-sellers___fr"
     }, {
       path: "/ar/Ecommerce/sellers",
-      component: _56fc792a,
+      component: _b55615d2,
       name: "Ecommerce-sellers___ar"
     }, {
       path: "/",
-      component: _b2441768,
+      component: _8c80baf8,
       name: "index___en"
     }, {
       path: "/es/",
-      component: _b2441768,
+      component: _8c80baf8,
       name: "index___es"
     }, {
       path: "/fr/",
-      component: _b2441768,
+      component: _8c80baf8,
       name: "index___fr"
     }, {
       path: "/ar/",
-      component: _b2441768,
+      component: _8c80baf8,
       name: "index___ar"
     }],
 

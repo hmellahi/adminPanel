@@ -1,4 +1,4 @@
-import './middleware';
+import './middleware'
 import Vue from 'vue'
 
 const routesNameSeparator = '___'
@@ -72,11 +72,12 @@ function switchLocalePathFactory (i18nPath) {
       const lang = this[i18nPath].locales.find(l => l[LOCALE_CODE_KEY] === locale)
       if (lang && lang[LOCALE_DOMAIN_KEY]) {
         let protocol
-        if (!process.browser) {
+        if (process.server) {
+          const isHTTPS = require('is-https');
           const { req } = this.$options._parentVnode.ssrContext
-          protocol = req.secure ? 'https' : 'http'
+          protocol = isHTTPS(req) ? 'https' : 'http'
         } else {
-          protocol = window.location.href.split(':')[0]
+          protocol = window.location.protocol.split(':')[0]
         }
         path = protocol + '://' + lang[LOCALE_DOMAIN_KEY] + path
       } else {

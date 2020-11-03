@@ -7,7 +7,7 @@ const VUEX_PROPERTIES = ['state', 'getters', 'actions', 'mutations']
 let store = {}
 
 void (function updateModules() {
-  store = normalizeRoot(require('..\\client\\store\\index.js'), 'store/index.js')
+  store = normalizeRoot(require('../client/store/index.js'), 'store/index.js')
 
   // If store is an exported method = classic mode (deprecated)
 
@@ -18,23 +18,23 @@ void (function updateModules() {
   // Enforce store modules
   store.modules = store.modules || {}
 
-  resolveStoreModules(require('..\\client\\store\\categories.js'), 'categories.js')
-  resolveStoreModules(require('..\\client\\store\\contacts.js'), 'contacts.js')
-  resolveStoreModules(require('..\\client\\store\\customers.js'), 'customers.js')
-  resolveStoreModules(require('..\\client\\store\\products.js'), 'products.js')
-  resolveStoreModules(require('..\\client\\store\\states.js'), 'states.js')
+  resolveStoreModules(require('../client/store/categories.js'), 'categories.js')
+  resolveStoreModules(require('../client/store/contacts.js'), 'contacts.js')
+  resolveStoreModules(require('../client/store/customers.js'), 'customers.js')
+  resolveStoreModules(require('../client/store/products.js'), 'products.js')
+  resolveStoreModules(require('../client/store/states.js'), 'states.js')
 
   // If the environment supports hot reloading...
 
   if (process.client && module.hot) {
     // Whenever any Vuex module is updated...
     module.hot.accept([
-      '..\\client\\store\\categories.js',
-      '..\\client\\store\\contacts.js',
-      '..\\client\\store\\customers.js',
-      '..\\client\\store\\index.js',
-      '..\\client\\store\\products.js',
-      '..\\client\\store\\states.js',
+      '../client/store/categories.js',
+      '../client/store/contacts.js',
+      '../client/store/customers.js',
+      '../client/store/index.js',
+      '../client/store/products.js',
+      '../client/store/states.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()
