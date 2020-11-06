@@ -23,7 +23,6 @@
             ></v-text-field>
           <v-checkbox label="Remember Me" v-model="saveSession" value="false"></v-checkbox>
         </v-card-text>
-      
             <v-btn
         		:disabled="!valid"
         		color="success"

@@ -240,7 +240,7 @@
       removeCustomer(e){
         let customer = e.target.parentNode.parentNode.parentNode.parentNode;
         console.log(customer);
-        this.customers.slice(0,this.customers.indexof(customer));
+        //this.customers.slice(0,this.customers.indexof(customer));
       },
       editCustomer(customer){
         this.customer = customer 

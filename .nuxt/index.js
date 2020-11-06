@@ -11,10 +11,10 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_vuetify_43c470f0 from 'nuxt_plugin_vuetify_43c470f0' // Source: ./vuetify.js (mode: 'all')
-import nuxt_plugin_pluginseo_a129bcf2 from 'nuxt_plugin_pluginseo_a129bcf2' // Source: ./nuxt-i18n/plugin.seo.js (mode: 'all')
-import nuxt_plugin_pluginrouting_d5992c04 from 'nuxt_plugin_pluginrouting_d5992c04' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_0cf01b9e from 'nuxt_plugin_pluginmain_0cf01b9e' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
+import nuxt_plugin_vuetify_787d0e21 from 'nuxt_plugin_vuetify_787d0e21' // Source: ./vuetify.js (mode: 'all')
+import nuxt_plugin_pluginseo_25cd3bf6 from 'nuxt_plugin_pluginseo_25cd3bf6' // Source: ./nuxt-i18n/plugin.seo.js (mode: 'all')
+import nuxt_plugin_pluginrouting_7f14b4ed from 'nuxt_plugin_pluginrouting_7f14b4ed' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_4f6925a2 from 'nuxt_plugin_pluginmain_4f6925a2' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
 
 // Component: <NoSsr>
 Vue.component(NoSsr.name, NoSsr)
@@ -150,20 +150,20 @@ async function createApp(ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_vuetify_43c470f0 === 'function') {
-    await nuxt_plugin_vuetify_43c470f0(app.context, inject)
+  if (typeof nuxt_plugin_vuetify_787d0e21 === 'function') {
+    await nuxt_plugin_vuetify_787d0e21(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginseo_a129bcf2 === 'function') {
-    await nuxt_plugin_pluginseo_a129bcf2(app.context, inject)
+  if (typeof nuxt_plugin_pluginseo_25cd3bf6 === 'function') {
+    await nuxt_plugin_pluginseo_25cd3bf6(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_d5992c04 === 'function') {
-    await nuxt_plugin_pluginrouting_d5992c04(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_7f14b4ed === 'function') {
+    await nuxt_plugin_pluginrouting_7f14b4ed(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_0cf01b9e === 'function') {
-    await nuxt_plugin_pluginmain_0cf01b9e(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_4f6925a2 === 'function') {
+    await nuxt_plugin_pluginmain_4f6925a2(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first
